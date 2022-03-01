@@ -1,0 +1,128 @@
+alert( "I’m invoked!");
+alert("Hello World");
+alert(3+1+2);
+
+let admin=9;
+let fname=10.5;
+fname="Guvi";
+let lname="Geek";
+admin= fname + lname;
+alert(`Hello ${admin}`);
+
+let a = prompt("First number?");
+let b= prompt("second number?");
+let c=parseInt(a);
+let d=parseInt(b);
+alert(a+b);
+alert(c+d);
+
+var a = "2" > "12";  //ASCII value of 2 is 50 and ASCII value of 1 is 49
+if (a) {
+  console.log("Code is Blasted")
+}
+else
+{
+  console.log("Diffused") 
+}
+
+let a=parseInt(prompt("Enter a number?"));
+if(a){
+    console.log("Omg it works for any number of characters");
+
+}
+else{
+    console.log("Success");
+};
+
+let d="-23.45";
+console.log(parseInt(d));  //-23
+
+let value = parseInt(prompt("How many runs you scored in this ball"));
+if(value === 4) {
+      console.log("You hit a Four");
+} else if (value === 6) {
+      console.log("You hit a Six");
+} else {
+      console.log("I couldn't figure out");
+}
+
+let login = 'Employee';
+let message = (login == 'Employee') ?(login == 'Employee') ? 'Greetings' : (login == '') ? 'No login' : "" : "" ;
+console.log(message);
+
+if (null || 2 || undefined )
+{
+ let message = "welcome boss";
+ console.log(message);
+}
+else
+{
+ let message = "Go away";
+ console.log(message);
+}
+
+let message;
+let lock = NaN;    //Null,undefined,NaN,0,"" ->gives false
+if (null || lock || undefined )
+{
+  message = "Go away";
+}
+else
+{
+ message = "welcome";
+}
+console.log(message);
+
+let message;
+let lock = 0;
+if (lock && " " || undefined )
+{
+  message = "Go away";
+}
+else
+{
+ message = "welcome";
+}
+console.log(message);
+
+
+
+let i = 3;
+while (i) {
+  console.log( i-- );
+}
+
+let num = 1
+while(num<11){
+  console.log(num++);
+}
+
+for (let num = 2; num <= 20; num += 2) {
+  console.log(num)
+}
+
+let gifts = ["teddy bear", "drone", "doll"];
+for (let i = 0; i < 3; i++) {
+  console.log(`Wrapped ${gifts[i]} and added a bow!`);
+}
+
+let countdown = 100;
+while (countdown < 0) {
+  countdown--;
+  if(countdown == 0)
+  {
+   console.log("bomb triggered");
+  }
+}
+
+var lemein = "0";
+var lemeout = 0;
+var msg = "";
+if (lemein) {
+ msg += "hi";
+ }
+if (lemeout) {
+ msg += "hello";
+}
+console.log(msg);
+

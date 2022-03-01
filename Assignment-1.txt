@@ -1,0 +1,70 @@
+2)Write a blog on Difference between HTTP1.1 vs HTTP2HTTP 1.1
+1.Keeps all request and response in plain text format.
+2.HTTP1.1. is slower and not efficient as compare to the HTTP 2
+3.Introduce in 1997
+4.Internet landscape was constantly changing with websites becoming more dynamic and heavy
+5.Features like CORS, keep alive was introduced in this update
+6.HOL-Head of Line Blocking
+TCP connection gets blocked till the response is received.
+6 TCP connections are allowed but that not sufficient
+7.Repetation of Header data
+stateless connection-every request/response is independent of previous request/response
+so with each request header contains user-agent, cookie, cache-control.
+This header data cant compress
+8.For each request new TCP connection is created so keep alive option introduce which enables re-using of the same TCP connection for multiple HTTP request.
+
+HTTP 2.0
+1.Uses binary framing layer to encapsulate all messages in binary fromat
+2. HTTP/2 is much faster and more efficient than HTTP/1.1
+3. In HTTP/2, the binary framing layer encodes requests/responses and cuts them up into smaller packets of information, greatly increasing the flexibility of data transfer.
+4.Introduce in 2015
+5.Uses single TCP connection with multiple streams. establishes a single connection object between the two machines. Within this connection there are multiple streams of data. Each stream consists of multiple messages in the familiar request/response format. Finally, each of these messages split into smaller units called frames
+Not required multiple TCP connections
+6.HTTPS is must
+7.Used HPACK
+Each request don’t contain Header again and again
+Header data is separate from request data and can e zipped
+HPACK also enables reuse of Header data which is repeated in every request
+HPACK reduces HTTP request size
+8.PUSH frames enables us to send mandatory resources in advance along with HTTP response like JS,CSS
+9.All modern web server supports HTTP2
+
+
+3)Write a blog about objects and its internal representation in Javascript
+
+Objects are variable which can contain many values
+Object values are written in name:value pair
+Name:”Mayuri”;  //Name is key or property or attribute or member_variable
+var Resume={ 
+            name:"Mayuri Gurav",                                             //Normal Object
+            email:"mayurigurav1997@gmail.com",
+            phone:"7666963900",
+            location:{                                                       //Nested Object
+                    address:"shivaji peth",
+                    postalCode:"416012",
+                    city:"Kolhapur",
+                    countryCode:"India",
+                    region:"Asia"
+            },
+            skills:{
+                    Devops:["Git","Jenkins","CI/CD","Bitbucket"],
+                    Programming_Languages:["Shell","JavaScript"],
+                    Operating_system:["Windows","Unix"],
+                    Databases:["MySQL","ORACLE"],
+                    Support_Tools:["JIRA","ServiceNow","AutosysBmp","Kanban"]
+                },
+            lastCompany:{
+                name:"TCS",
+                position:"System Engineer",
+                startDate:"16-09-19",
+                endDate:"28-01-22",
+                client:"Morgan Stanley",
+                domain:"Banking"
+            },
+            Education:
+                [{name:"Private Highschool",year:2013,percentage:"92"},                   //Array of Objects
+                 {name:"Vivekanand Colleage",year:2015,percentage:"78"},
+                 {name:"smt.Kashibai College of Engineering",year:2019,cgpa:"7.7"}]
+                
+
+}

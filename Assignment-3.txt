@@ -1,0 +1,158 @@
+1.For the given JSON iterate over all for loops (for, for in, for of, forEach)
+var obj=[
+    {person:"Mayuri",age:"24",company:"Guvi"},
+    {person:"Kirti",age:"25",company:"Guvi Geek"},
+    {person:"Samidha",age:"26",company:"Guvi Geek Network"}
+    ]
+//1.Normal For Loop
+for(var i=0;i<obj.length;i++){
+    user=obj[i];
+    console.log(`
+                Person:${user.person}
+                Age:${user.age}
+                Company:${user.company}`);
+}
+Output
+
+                Person:Mayuri
+                Age:24
+                Company:Guvi
+
+                Person:Kirti
+                Age:25
+                Company:Guvi Geek
+
+                Person:Samidha
+                Age:26
+                Company:Guvi Geek Network
+
+//2.forEach method
+obj.forEach(user=>{
+    console.log(`
+                Person:${user.person}
+                Age:${user.age}
+                Comapny:${user.company}`);
+});
+Output            
+                Person:Mayuri
+                Age:24
+                Comapny:Guvi
+
+                Person:Kirti
+                Age:25
+                Comapny:Guvi Geek
+
+                Person:Samidha
+                Age:26
+                Comapny:Guvi Geek Network
+
+//3.For In Loop
+for(var index in obj){
+    user=obj[index];
+    console.log(`
+                Person:${user.person}
+                Age:${user.age}
+                Company:${user.company}`);
+}
+Output
+			    Person:Mayuri
+                Age:24
+                Company:Guvi
+
+                Person:Kirti
+                Age:25
+                Company:Guvi Geek
+
+                Person:Samidha
+                Age:26
+                Company:Guvi Geek Network
+
+//4.For of Loop
+for(var user of obj){
+    console.log(`
+                Person:${user.person}
+                Age:${user.age}
+                Company:${user.company}`);
+}
+Output
+                Person:Mayuri
+                Age:24
+                Company:Guvi
+
+                Person:Kirti
+                Age:25
+                Company:Guvi Geek
+
+                Person:Samidha
+                Age:26
+                Company:Guvi Geek Network
+
+2.Create your own resume data in JSON format
+var Resume={
+            name:"Mayuri Gurav",
+            email:"mayurigurav1997@gmail.com",
+            phone:"7666963900",
+            location:{
+                    address:"shivaji peth",
+                    postalCode:"416012",
+                    city:"Kolhapur",
+                    countryCode:"India",
+                    region:"Asia"
+            },
+            skills:{
+                    Devops:["Git","Jenkins","CI/CD","Bitbucket"],
+                    Programming_Languages:["Shell","JavaScript"],
+                    Operating_system:["Windows","Unix"],
+                    Databases:["MySQL","ORACLE"],
+                    Support_Tools:["JIRA","ServiceNow","AutosysBmp","Kanban"]
+                },
+            lastCompany:{
+                name:"TCS",
+                position:"System Engineer",
+                startDate:"16-09-19",
+                endDate:"28-01-22",
+                client:"Morgan Stanley",
+                domain:"Banking"
+            },
+            Education:
+                [{name:"Private Highschool",year:2013,percentage:"92"},
+                 {name:"Vivekanand Colleage",year:2015,percentage:"78"},
+                 {name:"smt.Kashibai College of Engineering",year:2019,cgpa:"7.7"}]
+                
+
+}
+
+3.Read about the difference between window, screen and document in javascript
+1.Window Object
+Represents the browser window(current browsing text) and at the top of JS Object hierarchy
+supported by all browses
+members of window Object-global JS Objects,functions,variables
+properties of window Object-length,innerWidth,innerHeight,name
+Each browser tap has its own top level window object
+Each pf these windows gets its own separate global object
+
+2.Documnet Object
+When an HTML document is loaded into a web browser, it becomes Document Object
+It is the root node of the HTML document
+The document actually gets loaded inside the window object
+properties of document-title,URL,cookie
+
+3.Screen
+Screen is a small information object about physical screen diamension.
+It can be used to display screen width,height,colorDepth,pixelDepth
+It is not necessary to write window prefix with screen object
+Properties-
+screen.width
+screen.height
+screen.availWidth
+screen.availHeight
+screen.colorDepth
+screen.pixelDepth
+
+
+
+
+
+
+
+
